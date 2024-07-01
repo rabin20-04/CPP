@@ -1,5 +1,5 @@
 // Write a program to set a structure to hold a date (mm,dd and yy), assign values
-//  to the members of the structure and print out the values in the format 11/28/2004 by function.
+//  to the members of the structure and print out the values in the format 11/28/=2=004 by function.
 //  Pass the structure to the function
 
 #include <iostream>
@@ -21,9 +21,9 @@ int main()
     {
         cout << "Enter the month : " << endl;
         cin >> d1.month;
-        if (d1.month < 0 || d1.month > 12)
-            cout << " There are 12 months!\nEnter valid numnber" << endl;
-    } while (d1.month < 0 || d1.month > 12);
+        if (d1.month <= 0 || d1.month > 12)
+            cout << " There are 12 months in a year!\n Enter valid numnber" << endl;
+    } while (d1.month <= 0 || d1.month > 12);
 
     do
     {
@@ -31,9 +31,9 @@ int main()
 
         cin >> d1.day;
 
-        if (d1.day < 0 || d1.day > 12)
-            cout << "There are maxium 32 days in a month!\nEnter valid number" << endl;
-    } while (d1.day < 0 || d1.day > 32);
+        if (d1.day <= 0 || d1.day > 32)
+            cout << "There are maximum 32 days in a month!\n Enter valid number" << endl;
+    } while (d1.day <= 0 || d1.day > 32);
 
     cout << "Hey there \n The date you entered is : " << d1.day << "/" << d1.month << "/" << d1.year << endl;
 
