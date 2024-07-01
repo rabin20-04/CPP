@@ -16,9 +16,8 @@ int main()
     int feet, inch;
     cout << "Enter the length in feet: " << endl;
     cin >> feet;
-    inch = feet * 12;
     noarg();
-    // witharg(feet);
+    witharg(feet);
     witharg(feet, inch);
     passbyreference(feet);
     return 0;
@@ -37,6 +36,7 @@ void witharg(int feet)
 }
 void witharg(int feet, int &inch)
 {
+    inch=feet*12;
 
     cout << "Double argument \nThe length you entered " << feet << "feet in Inch equals : " << inch << endl;
 }
