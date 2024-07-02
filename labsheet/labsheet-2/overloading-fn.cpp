@@ -36,7 +36,7 @@ void witharg(int feet)
 }
 void witharg(int feet, int &inch)
 {
-    inch=feet*12;
+    inch = feet * 12;
 
     cout << "Double argument \nThe length you entered " << feet << "feet in Inch equals : " << inch << endl;
 }
