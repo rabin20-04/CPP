@@ -18,34 +18,41 @@ using namespace std;
 
 class office
 {
+
 public:
     string name;
     float salary, s_chief = 35000, information_inf = 25000, sys_analyst = 24000, s_programmer = 18000;
     int position_selection;
 
     void get_data()
+
     {
         cout << " Enter your position \n 1) Chief officer \n 2) Information officer \n 3)System analyst \n 4)Programmer" << endl;
         cin >> position_selection;
+
         if (position_selection > 4 || position_selection < 1)
         {
             cout << "Invalid selection!" << endl;
         }
+
         else if (position_selection == 1)
         {
 
             cout << "The Monthly salary of chief executive officer is : " << showdata(s_chief, 9) << endl;
         }
+
         else if (position_selection == 2)
         {
 
             cout << "The Monthly salary of Information officer is : " << showdata(information_inf, 10) << endl;
         }
+
         else if (position_selection == 3)
         {
 
             cout << "The Monthly salary of System Analyst is : " << showdata(sys_analyst, 11) << endl;
         }
+
         else if (position_selection == 4)
         {
 
