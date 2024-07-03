@@ -22,6 +22,7 @@ int main()
     passbyreference(feet);
     return 0;
 }
+
 void noarg()
 {
     cout << " For the function no argument : \nEnter the length in feet" << endl;
@@ -29,17 +30,20 @@ void noarg()
     cin >> feet;
     cout << " No argument\nThe length you entered " << feet << "feet in Inch equals : " << feet * 12 << endl;
 }
+
 void witharg(int feet)
 {
 
     cout << "Single argument \nThe length you entered " << feet << "feet in Inch equals : " << feet * 12 << endl;
 }
+
 void witharg(int feet, int &inch)
 {
     inch = feet * 12;
 
     cout << "Double argument \nThe length you entered " << feet << "feet in Inch equals : " << inch << endl;
 }
+
 void passbyreference(int &feet)
 {
     cout << "Pass by reference  \nThe length you entered " << feet << "feet in Inch equals : " << feet * 12 << endl;
