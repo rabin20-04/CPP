@@ -13,9 +13,49 @@
 
 // Make a function that takes two arguments; one salary and the other increment. Use proper default argument.
 
-
 #include <iostream>
 using namespace std;
+
+class office
+{
+public:
+    string name;
+    float salary, s_cheif = 35000, s_inf = 25000, sys_analyst = 24000, s_programmer = 18000;
+    int position_selection;
+
+    void get_data()
+    {
+        cout << " Enter your position \n 1) Chief officer \n 2) Information officer 3)System analyst 4)Programmer" << endl;
+        cin >> position_selection;
+        if (position_selection > 4 || position_selection < 1)
+        {
+            cout << "Invalid selection!" << endl;
+        }
+        else if (position_selection == 1)
+        {
+
+            cout << "The Monthly salary of cheif executive officer is : " << showdata(s_cheif, 9);
+        } else if (position_selection == 1)
+        {
+
+            cout << "The Monthly salary of System officer is : " << showdata(s_inf, 9);
+        } else if (position_selection == 1)
+        {
+
+            cout << "The Monthly salary of cheif executive officer is : " << showdata(s_cheif, 9);
+        } else if (position_selection == 1)
+        {
+
+            cout << "The Monthly salary of cheif executive officer is : " << showdata(s_cheif, 9);
+        }
+    }
+
+
+    int showdata(int salary, int increment)
+    {
+        return salary += salary * (increment / 100);
+    }
+};
 
 int main()
 {
