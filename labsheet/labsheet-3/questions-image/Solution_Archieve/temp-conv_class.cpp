@@ -28,7 +28,7 @@ private:
     float converted;
 
 public:
-    int toCelsius(float temp)
+    float toCelsius(float temp)
     {
         // return converted = (temp * 1.8) + 32;
         return ((temp - 32) * 10) / 18;
