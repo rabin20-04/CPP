@@ -7,8 +7,9 @@
 
 #include <iostream>
 using namespace std;
-
+void clearScreen();
 class Celsius
+
 {
 private:
     float temp;
@@ -46,14 +47,18 @@ int main()
 
     if (choice == 1)
     {
+        clearScreen();
         cout << "Enter the Farenheit value : " << endl;
         cin >> value;
         cout << "The Celsius value of " << value << " degree Farenheit is : " << c1.toFarenheit(value) << " degree Celsius" << endl;
-        float apple = c1.toFarenheit(value);
-        cout << "The Farenheit value of " << apple << " degree Celsius is : " << f1.toCelsius(apple) << " degree Farenheit" << endl;
+
+        // //to view if the result is correct
+        // float apple = c1.toFarenheit(value);
+        // cout << "The Farenheit value of " << apple << " degree Celsius is : " << f1.toCelsius(apple) << " degree Farenheit" << endl;
     }
     else if (choice == 2)
     {
+        clearScreen();
         cout << "Enter the Celsius value : " << endl;
         cin >> value;
         cout << "The Farenheit value of " << value << " degree Celsius is : " << f1.toCelsius(value) << " degree Farenheit" << endl;
@@ -64,4 +69,8 @@ int main()
     }
 
     return 0;
+}
+void clearScreen()
+{
+    system("clear");
 }
