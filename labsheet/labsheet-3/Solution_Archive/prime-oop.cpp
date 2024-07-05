@@ -9,6 +9,8 @@ using namespace std;
 class Prime
 {
 private:
+int check;
+int count;
     int num;
 
 public:
@@ -16,6 +18,7 @@ public:
     {
         for (int i=2;i<=num/2;i++)
         {
+          
             
 
         }
