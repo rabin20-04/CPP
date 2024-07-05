@@ -3,15 +3,33 @@
 // When it finishes checking a number the program asks if the user wants to do another calculation.
 // The response can be 'y' or 'n'. Don't forget to use the object-oriented concept.
 
-
-
 #include <iostream>
 using namespace std;
 
+class Prime
+{
+private:
+    int num;
+
+public:
+    void show()
+    {
+    }
+};
+
 int main()
 {
+    Prime p1;
+    int num;
+    char choice;
+    do
+    {
+        cout << "Enter any number to check whether it is Prime or not : " << endl;
+        cin >> num;
 
-    cout << "Enter " << endl;
+        cout << "Do you want to enter more ?\n Enter 'y' or 'n' : ";
+        cin >> choice;
+    } while (choice == 'y');
 
     return 0;
 }
