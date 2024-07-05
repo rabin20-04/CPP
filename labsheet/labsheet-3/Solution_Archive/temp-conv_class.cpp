@@ -7,29 +7,32 @@
 
 #include <iostream>
 using namespace std;
-void clearScreen();
-class Celsius
 
+void clearScreen();
+
+class Celsius
 {
 private:
     float temp;
-    float converted;
 
 public:
-    float toFahrenheit(float temp)
+    Celsius(float t) : temp(t) {}
+    float toFahrenheit()
     {
         // return converted = (temp * 1.8) + 32;
         return (temp * 1.8) + 32;
     }
 };
+
+
 class Fahrenheit
 {
 private:
     float temp;
-    float converted;
 
 public:
-    float toCelsius(float temp)
+    Fahrenheit(float t) : temp(t) {}
+    float toCelsius()
     {
         // return converted = (temp * 1.8) + 32;
         return ((temp - 32) * 10) / 18;
@@ -38,11 +41,12 @@ public:
 
 int main()
 {
-    Celsius c1;
-    Fahrenheit f1;
+    //     Celsius c1;
+    //     Fahrenheit f1;
 
     cout << "Which temperature do you want to convert ? \n 1)Fahrenheit to Celsius \n2) Celsius to Fahrenheit  " << endl;
-    float choice, value;
+    float value;
+    int choice;
     cin >> choice;
 
     if (choice == 1)
@@ -50,7 +54,8 @@ int main()
         clearScreen();
         cout << "Enter the Fahrenheit value : " << endl;
         cin >> value;
-        cout << "The Celsius value of " << value << " degree Fahrenheit is : " << c1.toFahrenheit(value) << " degree Celsius" << endl;
+        Fahrenheit f1(value);
+        cout << "The Celsius value of " << value << " degree Fahrenheit is : " << f1.toCelsius() << " degree Celsius" << endl;
 
         // //to view if the result is correct
         // float apple = c1.toFahrenheit(value);
@@ -61,7 +66,8 @@ int main()
         clearScreen();
         cout << "Enter the Celsius value : " << endl;
         cin >> value;
-        cout << "The Fahrenheit value of " << value << " degree Celsius is : " << f1.toCelsius(value) << " degree Fahrenheit" << endl;
+        Celsius c1(value);
+        cout << "The Fahrenheit value of " << value << " degree Celsius is : " << c1.toFahrenheit() << " degree Fahrenheit" << endl;
     }
     else
     {
