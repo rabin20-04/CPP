@@ -41,7 +41,7 @@ public:
 
     // Method -3
     Student(string nam, int roll_number, string addressss, string yoursection)
-    // if we use differet attribute than parameter name no need to use this->
+    // if we use differet attribute than parameter name ,,,no need to use this->
 
     {
         name = nam;
