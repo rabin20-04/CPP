@@ -8,7 +8,10 @@ private:
 
 public:
     // Test(int x, int y) : num1(x), num2(y) {}
-    Test(int x, int y) : num1(x), num2(x+y) {}
+    Test(int x, int y) : num1(x), num2(x + y) {}
+    Test(int x, int y) : num1(x), num2(num1 + y) {}
+    // Test(int x, int y) :  num2(x+y),num1(x) {}   -------may give a erro because num1 is defined first
+    //---when num1 is initialized nu2 contains garbage value and is not initialized
 
     void display()
     {
