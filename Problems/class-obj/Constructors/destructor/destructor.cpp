@@ -9,13 +9,16 @@ public:
         cout << "Hello there !" << endl;
         cout << "Here is the constructor" << endl;
     }
-    ~Caller()
+
+
+    ~Caller() //--------destructor
     {
         cout << "Hi there !" << endl;
         cout << "Here is the destructor" << endl;
-    }
+    } // just after printing this destructor destructs the object  not class
+
     //-------------destructor execotes within the {}
-    //when the main ends in this case 
+    // when the main ends in this case
     // void Ccaller()
     // {
     //     cout << "Hi there !" << endl;
