@@ -1,3 +1,4 @@
+//cpp --hotel
 #include <iostream>
 using namespace std;
 
