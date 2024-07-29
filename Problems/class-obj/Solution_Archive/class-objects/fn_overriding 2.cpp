@@ -26,8 +26,8 @@ int main() {
     Shape* shape1 = new Circle();
     Shape* shape2 = new Rectangle();
 
-    shape1->draw(); // Output: Drawing a circle
-    shape2->draw(); // Output: Drawing a rectangle
+    shape1->draw();
+    shape2->draw();
 
     delete shape1;
     delete shape2;
